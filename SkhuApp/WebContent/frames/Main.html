@@ -1,0 +1,59 @@
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script
+	src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="../js/treeMapFunc.js"></script>
+<script type="text/javascript" src="../js/raphael-min.js"></script>
+<script type="text/javascript" src="../js/treemap-squared-0.5.min.js"></script>
+
+<script type="text/javascript" src="../js/frameSet.js"></script>
+
+</head>
+
+
+<body style="margin: 0">
+	<div data-role="page" id="pageone" style="overflow: hidden;">
+		<div data-role="panel" id="myPanel" style="overflow:hidden;">
+			<h2>Panel Header</h2>
+			<p>You can close the panel by clicking outside the panel,
+				pressing the Esc key or by swiping.</p>
+			<a href="#pageone" data-rel="close"
+				class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close
+				panel</a>
+		</div>
+
+		<div data-role="header">
+			<h1>Today's News</h1>
+			<a href="#myPanel" id="openPanel"
+				class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Detail</a> <select
+				data-native-menu="false">
+				<option value="eco">Economy</option>
+				<option value="pol">Politics</option>
+				<option value="spo">Sports</option>
+				<option value="jpn">Japan</option>
+				<option value="eng">English</option>
+				<option value="it">IT</option>
+			</select>
+		</div>
+
+		<div data-role="main" class="ui-content" id="mainScreen"
+			style="padding: 0">
+			<!-- 내용 -->
+
+			<div id="right_side" style="width: 100%; display: none;"></div>
+			<div id="example-2"></div>
+
+		</div>
+	</div>
+
+
+</body>
+</html>
+
+
