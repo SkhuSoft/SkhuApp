@@ -8,22 +8,31 @@
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 <script
 	src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="../js/datas.js"></script>
 <script type="text/javascript" src="../js/treeMapFunc.js"></script>
 <script type="text/javascript" src="../js/raphael-min.js"></script>
 <script type="text/javascript" src="../js/treemap-squared-0.5.min.js"></script>
 
 <script type="text/javascript" src="../js/frameSet.js"></script>
 
+
+<script>
+	$(function(){
+		//alert(D.economy[0][1]);
+		
+	});
+</script>
 </head>
 
 
 <body style="margin: 0">
 	<div data-role="page" id="pageone" style="overflow: hidden;">
-		<div data-role="panel" id="myPanel" style="overflow:hidden;">
+		<div data-role="panel" id="myPanel" style="overflow-y: scroll;">
 			<h2>Panel Header</h2>
-			<p>You can close the panel by clicking outside the panel,
-				pressing the Esc key or by swiping.</p>
+			<p style="position: absolute;">You can close the panel by
+				clicking outside the panel, pressing the Esc key or by swiping.</p>
 			<a href="#pageone" data-rel="close"
+				style="position: fixed; bottom: 12px; left: 10px; opacity: 0.8;"
 				class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close
 				panel</a>
 		</div>
