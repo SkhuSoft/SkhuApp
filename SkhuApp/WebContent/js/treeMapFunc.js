@@ -1,24 +1,31 @@
 $(function() {
 	showNews();
+
+	$("#selectGenre").change(function() {
+		switch ($(this).val()) {
+		case "economy":
+			categorys.now = categorys.economy;
+			//$("span")article.title = D.economy[index][0];
+			break;
+		case "politics":
+			categorys.now = categorys.politics;
+			break;
+		case "sports":
+			categorys.now = categorys.sports;
+			break;
+		case "japan":
+			categorys.now = categorys.japan;
+			break;
+		case "english":
+			categorys.now = categorys.english;
+			break;
+		case "it":
+			categorys.now = categorys.it;
+			break;
+		}		
+
+	});
 });
-
-var data = [ [ 8, 4, 4 ], // 정치
-[ 9, 8, 7 ], // 경제
-[ 10, 6, 3 ], // 스포츠
-[ 12, 6, 5 ], // 해외
-[ 10, 10, 3 ], // 해외
-[ 6, 5, 3 ] // IT기술
-];
-
-var labels = [ [ 1, 1, 1 ], [ 1, 1, 1 ], [ 1, 1, 1 ], [ 1, 1, 1 ], [ 1, 1, 1 ],
-		[ 1, 1, 1 ] ];
-
-var winX = $("#example-2").width();// 360;
-var winY = $("#example-2").height();// 600;
-
-var sizeOfHeader = 44;
-var category = 0;
-var article;
 
 window.onresize = function(event) {
 	showNews();
@@ -28,39 +35,31 @@ window.onresize = function(event) {
 function showArticles(index) {
 	// ajax로 갖고올것.
 	article = {};
-	switch (category) {
-	case 0:// 경제일때
-		article.title = D.economy[index][0];
-		article.contents = D.economy[index][1];
-		break;
-	case 1:
+	switch (categorys.now) {
+	case 1:// 경제일때
 		article.title = D.economy[index][0];
 		article.contents = D.economy[index][1];
 		break;
 	case 2:
-		article.title = D.economy[index][0];
-		article.contents = D.economy[index][1];
+		article.title = D.politics[index][0];
+		article.contents = D.politics[index][1];
 		break;
 	case 3:
-		article.title = D.economy[index][0];
-		article.contents = D.economy[index][1];
+		article.title = D.sports[index][0];
+		article.contents = D.sports[index][1];
 		break;
 	case 4:
-		article.title = D.economy[index][0];
-		article.contents = D.economy[index][1];
+		article.title = D.japan[index][0];
+		article.contents = D.japan[index][1];
 		break;
 	case 5:
-		article.title = D.economy[index][0];
-		article.contents = D.economy[index][1];
+		article.title = D.english[index][0];
+		article.contents = D.english[index][1];
 		break;
 	case 6:
-		article.title = D.economy[index][0];
-		article.contents = D.economy[index][1];
+		article.title = D.it[index][0];
+		article.contents = D.it[index][1];
 		break;
-	default:
-		article.title = D.economy[index][0];
-	article.contents = D.economy[index][1];
-	break;
 	}
 	return article;
 }

@@ -8,7 +8,8 @@
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 <script
 	src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<script type="text/javascript" src="../js/datas.js"></script>
+<script type="text/javascript" src="../js/values.js"></script>
+<script type="text/javascript" src="../js/db.js"></script>
 <script type="text/javascript" src="../js/treeMapFunc.js"></script>
 <script type="text/javascript" src="../js/raphael-min.js"></script>
 <script type="text/javascript" src="../js/treemap-squared-0.5.min.js"></script>
@@ -16,12 +17,6 @@
 <script type="text/javascript" src="../js/frameSet.js"></script>
 
 
-<script>
-	$(function(){
-		//alert(D.economy[0][1]);
-		
-	});
-</script>
 </head>
 
 
@@ -40,13 +35,13 @@
 		<div data-role="header">
 			<h1>Today's News</h1>
 			<a href="#myPanel" id="openPanel"
-				class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Detail</a> <select
-				data-native-menu="false">
-				<option value="eco">Economy</option>
-				<option value="pol">Politics</option>
-				<option value="spo">Sports</option>
-				<option value="jpn">Japan</option>
-				<option value="eng">English</option>
+				class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Detail</a> 
+			<select data-native-menu="false" id="selectGenre">
+				<option value="economy">Economy</option>
+				<option value="politics">Politics</option>
+				<option value="sports">Sports</option>
+				<option value="japan">Japan</option>
+				<option value="english">English</option>
 				<option value="it">IT</option>
 			</select>
 		</div>
